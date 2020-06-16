@@ -37,12 +37,12 @@ function measureConnectionSpeed() {
   let startTime, endTime;
   let download = new Image();
   download.onload = function () {
-      endTime = (new Date()).getTime();
-      showResults();
+    endTime = (new Date()).getTime();
+    showResults();
   }
   
   download.onerror = function (err, msg) {
-      progressMessage('Error downloading.');
+    progressMessage('Error downloading.');
   }
   
   startTime = (new Date()).getTime();
@@ -50,15 +50,14 @@ function measureConnectionSpeed() {
   download.src = imageAddress + cacheDestroyer;
   
   function showResults() {
-      var duration = (endTime - startTime) / 1000;
-      var bitsLoaded = downloadSize * 8;
-      var speedBps = (bitsLoaded / duration).toFixed(1);
-      var speedKbps = (speedBps / 1024).toFixed(1);
-      var speedMbps = (speedKbps / 1024).toFixed(1);
-      restartButton.style.setProperty('display', 'block');
-      progressMessage([
-          speedMbps + ' Mbps'
-      ]);
-
+    let duration = (endTime - startTime) / 1000;
+    let bitsLoaded = downloadSize * 8;
+    let speedBps = (bitsLoaded / duration).toFixed(1);
+    let speedKbps = (speedBps / 1024).toFixed(1);
+    let speedMbps = (speedKbps / 1024).toFixed(1);
+    restartButton.style.setProperty('display', 'block');
+    progressMessage([
+      speedMbps + ' Mbps'
+    ]);
   }
 }
