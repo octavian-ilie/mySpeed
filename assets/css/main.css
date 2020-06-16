@@ -1,0 +1,260 @@
+/* -------------------------------------------------------------------------
+Fonts
+------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Octavian Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Regular.eot?r-1810058");
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Regular.eot?#iefix?r-1810058") format("embedded-opentype"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Regular.svg?v=20151022b#Octavian-Regular?r-1810058") format("svgz"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Regular.svg?v=20151022b#Octavian-Regular?r-1810058") format("svg"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Regular.woff?v=20151022b?r-1810058") format("woff"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Regular.woff?v=20151022b?r-1810058") format("woff")
+}
+
+@font-face {
+  font-family: 'Octavian Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Medium.eot?r-1810058");
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Medium.eot?#iefix?r-1810058") format("embedded-opentype"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Medium.svg?v=20151022b#Octavian-Medium?r-1810058") format("svgz"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Medium.svg?v=20151022b#Octavian-Medium?r-1810058") format("svg"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Medium.woff?v=20151022b?r-1810058") format("woff"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Medium.woff?v=20151022b?r-1810058") format("woff")
+}
+
+@font-face {
+  font-family: 'Octavian Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Bold.eot?r-1810058");
+  src: url("https://apps.octavian.nl/static/fonts/Octavian-Bold.eot?#iefix?r-1810058") format("embedded-opentype"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Bold.svg?v=20151022b#octavian-bold?r-1810058") format("svgz"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Bold.svg?v=20151022b#octavian-bold?r-1810058") format("svg"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Bold.woff?v=20151022b?r-1810058") format("woff"),
+       url("https://apps.octavian.nl/static/fonts/Octavian-Bold.woff?v=20151022b?r-1810058") format("woff")
+}
+
+/* -------------------------------------------------------------------------
+Default settings
+------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overscroll-behavior: none;
+  font-family: 'Octavian Regular', Helvetica, Arial, sans-serif;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #ffbf00;
+}
+
+::selection {
+  color: #fff;
+  background: #ffbf00;
+}
+
+/* -------------------------------------------------------------------------
+Header
+------------------------------------------------------------------------- */
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  height: 160px;
+  padding: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-brand {
+  margin-right: 30px;
+}
+
+.brand-logo {
+  height: 84px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+}
+
+svg.brand-logo:hover {
+  fill: #ffbf00;
+}
+
+.app-title {
+  color: #000;
+  font-family: 'Octavian Regular', Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  flex-grow: 1;
+}
+
+.nav-link a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 10px 16px 6px 16px;
+  border-radius: 5px;
+  transition-timing-function: ease;
+  transition: 0.3s;
+}
+
+.nav-link a:hover {
+  background-color: #ffbf00;
+  color: #000;
+}
+
+.nav-link a:active {
+  color: #fff;
+  background-color: #ffbf00;
+}
+
+/* -------------------------------------------------------------------------
+Main
+------------------------------------------------------------------------- */
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.speed-result {
+  font-size: 14em;
+  align-self: center;
+}
+
+.restart {
+  align-self: center;
+  font-family: 'Octavian Medium', Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+  border-radius: 5px;
+  background-color: #ffbf00;
+  color: #000;
+  padding: 16px 16px 14px 16px;
+  line-height: 1;
+  display: none;
+}
+
+.restart:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------
+Footer
+------------------------------------------------------------------------- */
+
+footer {
+  width: 100%;
+  height: 160px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.footer-text {
+  align-self: center;
+  font-size: 20pt;
+}
+
+/* -------------------------------------------------------------------------
+Smaller Versions
+------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1800px) {
+  .speed-result {
+    font-size: 12em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .speed-result {
+    font-size: 7em;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  header {
+    padding: 12px 16px 16px 16px;
+    height: auto;
+  }
+
+  .header-brand {
+    margin-right: 18px;
+  }
+
+  .brand-logo {
+    height: 52px;
+    margin-top: 6px;
+  }
+
+  .app-title {
+    font-size: 1.8em;
+  }
+
+  .nav-link a {
+    font-size: 10pt;
+  }
+
+  footer {
+    padding: 16px;
+    height: auto;
+  }
+
+  .footer-text {
+    font-size: 16pt;
+  }
+
+  .speed-result {
+    font-size: 4.5em;
+  }
+}
